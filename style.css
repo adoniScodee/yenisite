@@ -1,84 +1,76 @@
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#0f0f0f;
-color:white;
-text-align:center;
+:root {
+  --red: #9B1C2C;
+  --gold: #D4AF37;
 }
 
-header{
-padding:40px 20px;
-background:black;
-box-shadow:0 5px 15px rgba(0,0,0,0.5);
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.logo3d img{
-width:90px;
-margin-bottom:10px;
-animation:float 3s ease-in-out infinite;
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(27, 27, 27, 0.95);
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
-@keyframes float{
-0%{transform:translateY(0px)}
-50%{transform:translateY(-8px)}
-100%{transform:translateY(0px)}
+.logo img { height: 60px; }
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+              url('https://images.unsplash.com/photo-1441986300917-64674bd600d8') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
 }
 
-h1{
-font-size:32px;
-letter-spacing:3px;
+.hero h1 {
+  font-size: 5rem;
+  color: var(--red);
+  margin-bottom: 10px;
 }
 
-.hero{
-padding:70px 20px;
-background:linear-gradient(135deg,#111,#222);
+.btn {
+  padding: 14px 32px;
+  margin: 10px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.hero h2{
-font-size:30px;
-margin-bottom:10px;
+.btn:hover { transform: translateY(-5px); }
+
+.whatsapp {
+  background: #25D366;
+  color: white;
 }
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:15px 30px;
-background:#25D366;
-color:white;
-font-size:18px;
-border-radius:10px;
-text-decoration:none;
-transition:0.3s;
+.section {
+  padding: 100px 5%;
 }
 
-.btn:hover{
-transform:scale(1.08);
-box-shadow:0 0 15px #25D366;
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  color: var(--red);
+  margin-bottom: 50px;
 }
 
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-padding:50px 20px;
-}
-
-.card{
-background:#1a1a1a;
-padding:25px;
-border-radius:12px;
-transition:0.3s;
-box-shadow:0 5px 15px rgba(0,0,0,0.4);
-}
-
-.card:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 25px rgba(0,0,0,0.7);
-}
-
-footer{
-padding:20px;
-background:black;
-margin-top:30px;
-font-size:14px;
+footer {
+  background: #1a1a1a;
+  color: white;
+  text-align: center;
+  padding: 40px;
 }
